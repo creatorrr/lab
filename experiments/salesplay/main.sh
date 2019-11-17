@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+script="${1}"
+
 for product_code in `xsv select product_code salesplay.csv | tail -n +2`; do
-    ./update_product.sh "${product_code}" STOCK_CONTROL 1
+    bash "${script}" "${product_code}" "${@:2}"
 done
