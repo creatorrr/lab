@@ -27,7 +27,7 @@ change_type=""
   change_type+="product_code=${product_code}"
   change_type+="&product_change_column_type=${product_change_column_type}"
 
-params="is_centeralise=0&status=${value}&t=${value}"
+params="status=${value}&is_centeralise=0&t=1"
 payload="${params}&${id_info}&${change_type}"
 
 curl "${API_ROOT}/${SCRIPT}" \
